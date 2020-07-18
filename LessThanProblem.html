@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+</head>
+<body>
+<button type="button" onclick="LessThan25()">Less Than25</button>
+<button type="button" onclick="MoreThan50()">More Than50</button>
+<button type="button" onclick="ShowAll()">Show All</button>
+<br>
+<table id="tab">
+<tr>
+<td>1</td>
+<td>50</td>
+</tr>
+<tr>
+<td>2</td>
+<td>47</td>
+</tr>
+<tr>
+<td>3</td>
+<td>24</td>
+</tr>
+<tr>
+<td>4</td>
+<td>100</td>
+</tr>
+</table>
+<script>
+var t=document.getElementById("tab")
+
+function LessThan25()
+{
+   for( var x=0; x<=t.rows.length; x++)
+{
+   if(Number(t.rows[x].cells[1].innerHTML)<25)
+{
+document.getElementById("tab").rows[x].style.display ="none"
+}
+}
+}
+
+function MoreThan50()
+{
+   for( var x=0; x<=t.rows.length; x++)
+{
+   if(Number(t.rows[x].cells[1].innerHTML)>50)
+{
+document.getElementById("tab").rows[x].style.display ="none"
+}
+}
+}
+
+function ShowAll()
+{
+   for( var x=0; x<=t.rows.length; x++)
+{
+   if(Number(t.rows[x].cells[1].innerHTML))
+{
+document.getElementById("tab").rows[x].style.display =""
+}
+}
+}
+
+</script>
+</body>
+</html>
+
+
+

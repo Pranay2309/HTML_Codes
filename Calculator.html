@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+</head>
+<body>
+<form>
+
+N1: <input  type="text" id="Enter the first number" style="color: blue; background-color: cyan;border width: 300 px; margin-bottom: 10px;"/>
+<br>
+N2: <input type="text" id="Enter the second number" style="color: red; background-color: lightgreen;border width: 300 px; margin-bottom: 10px;"/>
+<br>
+
+
+<p>Result</p>
+<p id=Result></p>
+<p id="check"></p>
+
+<button type="button" onclick="Add()">Add</button>
+<button type="button" onclick="Subtract()">Subtract</button>
+ 
+<button type="button" onclick="Multiply()">Multiply</button>
+<button type="button" onclick="Divide()">Divide</button>
+
+</form>
+<script type="text/javascript">
+  
+function Add()
+{
+      A=document.getElementById("Enter the first number").value;
+      B=document.getElementById("Enter the second number").value;
+     document.getElementById("Result").innerHTML=Number(A)+Number(B);
+   
+}
+
+function Subtract()
+{
+      A=document.getElementById("Enter the first number").value;
+      B=document.getElementById("Enter the second number").value;
+     document.getElementById("Result").innerHTML=A-B;
+    
+}
+
+function Multiply()
+{
+      A=document.getElementById("Enter the first number").value;
+      B=document.getElementById("Enter the second number").value;
+     document.getElementById("Result").innerHTML=A*B;
+    
+}
+
+function Divide()
+{
+      A=document.getElementById("Enter the first number").value;
+      B=document.getElementById("Enter the second number").value;
+     document.getElementById("Result").innerHTML=A/B;
+    
+}
+
+function validate()
+ {
+   var x=document.getElementById("Enter the first number").value;
+   console.log(x);
+   var y=document.getElementById("Enter the second number").value;
+   console.log(y);
+        if (!Number(x) && !Number(y))
+          {
+             alert("Not Valid");
+             
+          }
+}
+</script>
+</body>
+</html>
+  
